@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://api.fontshare.com/css?f[]=satoshi@400
 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="styles.css">
     
 
@@ -20,7 +22,7 @@
 </head>
 <body>
 
-    <!-- ini buat partikel -->
+    <!-- buat nanti partikel -->
     <canvas id="field"></canvas> 
 
     <div class="grain"></div>
@@ -43,6 +45,301 @@
             <span></span><span></span>
         </button>
     </header>
+
+    <main id="top">
+
+    <section class="hero">
+        <p class="eyebrow" data-reveal>Informatics student at Universitas Sebelas Maret</p>
+        
+        <h1 class="hero__headline" data-reveal>
+        I build systems that <span class="accent">people can actually use</span>.
+        </h1>
+
+        <p class="hero__sub" data-reveal>
+        I am Muhamad Nabil Fannani, a web developer and Informatics student at
+        Universitas Sebelas Maret. I work on institutional platforms, Laravel
+        applications, and practical digital products that need to be useful in the real world.
+        </p>
+
+        <div class="hero__actions" data-reveal>
+            <a href="#work" class="btn btn--outline">see the work</a>
+            <a href="https://github.com/Nabil-Fan" target="_blank" rel="noopener" class="btn btn--ghost">github ↗</a>
+        </div>
+
+        <div class="hero__frame" aria-hidden="true">
+            <span class="corner corner--tl"></span>
+            <span class="corner corner--tr"></span>
+            <span class="corner corner--bl"></span>
+            <span class="corner corner--br"></span>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+            <div class="scroll-indicator__box"><span></span></div>
+        </div>
+    </section>
+
+    <section class="statement">
+    <p>
+      A lot of my work happens where real institutions meet real deadlines.
+      I care more about whether a system works well for the people using it than whether it looks impressive in a pitch deck.
+    </p>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section class="work" id="work">
+    <div class="section-head">
+      <span class="sparkle" aria-hidden="true">✦</span>
+      <h2 class="section-title">Selected work</h2>
+    </div>
+
+    <div class="work__list">
+
+      <article class="project" data-project>
+        <div class="project__media">
+          <img src="assets/images/projects/alumnipedia.png" alt="Alumnipedia interface" loading="lazy"
+               onerror="this.closest('.project__media').classList.add('project__media--empty')">
+          <span class="project__media-label">alumnipedia.jpg</span>
+        </div>
+        <div class="project__body">
+          <p class="project__meta">full stack developer and UI/UX · Laravel</p>
+          <h3 class="project__title">Alumnipedia</h3>
+          <p class="project__desc">
+            An alumni information portal built within the DAKM ecosystem. The goal was to make alumni data and content easier to access without turning the system into something heavy or confusing. I handled the front end and UI work and helped with the Laravel back end.
+          </p>
+          <ul class="project__tags">
+            <li>PHP</li><li>Laravel</li><li>MySQL</li><li>JavaScript</li>
+          </ul>
+          <a href="https://dakm-alumni.uns.ac.id/alumnipedia" target="_blank" rel="noopener" class="project__link">view live ↗</a>
+        </div>
+      </article>
+
+      <article class="project project--reverse" data-project>
+        <div class="project__media">
+          <img src="assets/images/projects/sistemPenelusuranAlumni.png" alt="UNS Alumni Tracer System dashboard" loading="lazy"
+               onerror="this.closest('.project__media').classList.add('project__media--empty')">
+          <span class="project__media-label">sistemPenelusuranAlumni.png</span>
+        </div>
+        <div class="project__body">
+          <p class="project__meta">web developer · role based system</p>
+          <h3 class="project__title">UNS Alumni Tracer System</h3>
+          <p class="project__desc">
+            This is a Laravel application for searching alumni data, updating personal records, and giving admins access to imported information and statistics. Different roles see different parts of the system, but the main goal is simple: keep the data clear and the interface easy to use.
+          </p>
+          <ul class="project__tags">
+            <li>PHP</li><li>Laravel</li><li>MySQL</li><li>Role based auth</li>
+          </ul>
+          <a href="https://dakm-alumni.uns.ac.id/penelusuran-alumni" target="_blank" rel="noopener" class="project__link">view live ↗</a>
+        </div>
+      </article>
+
+      <article class="project" data-project>
+        <div class="project__media">
+          <img src="assets/images/projects/dakm-website.png" alt="DAKM UNS official website" loading="lazy"
+               onerror="this.closest('.project__media').classList.add('project__media--empty')">
+          <span class="project__media-label">dakm-website.png</span>
+        </div>
+        <div class="project__body">
+          <p class="project__meta">web administrator and programmer · WordPress</p>
+          <h3 class="project__title">DAKM UNS Official Website</h3>
+          <p class="project__desc">
+            This was one of my first institutional web projects. I worked on content updates, page layout changes, and small technical fixes while learning how public university websites need to balance clarity, speed, and formal presentation.
+          </p>
+          <ul class="project__tags">
+            <li>WordPress</li><li>Elementor</li><li>PHP</li>
+          </ul>
+          <a href="https://dakm.uns.ac.id/" target="_blank" rel="noopener" class="project__link">view live ↗</a>
+        </div>
+      </article>
+
+      <article class="project project--reverse" data-project>
+        <div class="project__media">
+          <img src="assets/images/projects/ecoeats.png" alt="EcoEats surplus food marketplace" loading="lazy"
+               onerror="this.closest('.project__media').classList.add('project__media--empty')">
+          <span class="project__media-label">ecoeats.jpg</span>
+        </div>
+        <div class="project__body">
+          <p class="project__meta">project manager and developer · team of 4</p>
+          <h3 class="project__title">EcoEats</h3>
+          <p class="project__desc">
+            A surplus food marketplace built for Solo. I worked with a small team to plan the app, build the backend, and connect the system to an Android client. The idea was simple: make it easier for merchants and buyers to connect around food that would otherwise go to waste.
+          </p>
+          <ul class="project__tags">
+            <li>Laravel 11</li><li>Kotlin</li><li>Jetpack Compose</li><li>Sanctum</li><li>Leaflet.js</li>
+          </ul>
+          <a href="https://github.com/Nabil-Fan/praktikum-rpl-a-5" target="_blank" rel="noopener" class="project__link">view repo ↗</a>
+        </div>
+      </article>
+
+      <article class="project" data-project>
+        <div class="project__media">
+          <img src="assets/images/projects/friendyours.png" alt="FriendYours mental health platform" loading="lazy"
+               onerror="this.closest('.project__media').classList.add('project__media--empty')">
+          <span class="project__media-label">friendyours.jpg</span>
+        </div>
+        <div class="project__body">
+          <p class="project__meta">web developer · Gemastik 2025</p>
+          <h3 class="project__title">FriendYours</h3>
+          <p class="project__desc">
+            A platform for students and workers to reflect on their emotional state and get support in a more accessible way. I contributed heavily to the interface and chatbot flow, including the internal AI logic for detecting context, mood, and risk signals.
+          </p>
+          <ul class="project__tags">
+            <li>JavaScript</li><li>AI response system</li><li>Crisis detection</li>
+          </ul>
+          <a href="https://uns.id/friendyours" target="_blank" rel="noopener" class="project__link">view live ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ TIMELINE ============ -->
+  <section class="timeline" id="timeline">
+    <div class="section-head">
+      <span class="sparkle" aria-hidden="true">✦</span>
+      <h2 class="section-title">Where the time went</h2>
+    </div>
+
+    <ol class="timeline__list">
+      <li class="timeline__item" data-tl>
+        <span class="timeline__date">Jan 2024 to present</span>
+        <h3 class="timeline__role">Web Administrator and Programmer, DAKM UNS</h3>
+        <p class="timeline__desc">
+          Started with a WordPress site and gradually moved into front end work, content management, and Laravel development for institutional systems.
+        </p>
+      </li>
+      <li class="timeline__item" data-tl>
+        <span class="timeline__date">Jun 2025 to Jun 2026</span>
+        <h3 class="timeline__role">Teaching Assistant, Programming Concepts and Computer System Organization</h3>
+        <p class="timeline__desc">
+          Taught practical classes and helped students work through coding exercises and technical concepts at different levels of understanding.
+        </p>
+      </li>
+      <li class="timeline__item" data-tl>
+        <span class="timeline__date">Feb 2026 to Jun 2026</span>
+        <h3 class="timeline__role">Project Manager, EcoEats</h3>
+        <p class="timeline__desc">
+          Led a small team through planning, documentation, and MVP delivery while staying involved in the Laravel backend.
+        </p>
+      </li>
+      <li class="timeline__item" data-tl>
+        <span class="timeline__date">Jun 2026 to present</span>
+        <h3 class="timeline__role">Person in Charge, NovoClub Batch 4</h3>
+        <p class="timeline__desc">
+          Helped coordinate early project work, communication, and team execution in a social impact environment.
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ CAPABILITY / SKILLS ============ -->
+  <section class="capability" id="capability">
+    <div class="section-head">
+      <span class="sparkle" aria-hidden="true">✦</span>
+      <h2 class="section-title">Capability</h2>
+    </div>
+
+    <div class="capability__grid">
+      <div class="capability__card" data-tilt>
+        <span class="capability__index">WEB</span>
+        <h3>Web development</h3>
+        <p>HTML, CSS, JavaScript, PHP, Laravel, Blade, REST APIs.</p>
+      </div>
+      <div class="capability__card" data-tilt>
+        <span class="capability__index">UI</span>
+        <h3>Front end and UI</h3>
+        <p>Responsive layout, interface design, user flow, Bootstrap, jQuery.</p>
+      </div>
+      <div class="capability__card" data-tilt>
+        <span class="capability__index">DB</span>
+        <h3>Database</h3>
+        <p>MySQL, MariaDB, schema design, CRUD-based applications.</p>
+      </div>
+      <div class="capability__card" data-tilt>
+        <span class="capability__index">MOB</span>
+        <h3>Mobile</h3>
+        <p>Kotlin, Jetpack Compose, MVVM, StateFlow, Retrofit, Sanctum.</p>
+      </div>
+      <div class="capability__card" data-tilt>
+        <span class="capability__index">GEO</span>
+        <h3>Mapping</h3>
+        <p>Leaflet.js, OpenStreetMap, OSMDroid.</p>
+      </div>
+      <div class="capability__card" data-tilt>
+        <span class="capability__index">CMS</span>
+        <h3>CMS and content</h3>
+        <p>WordPress, page building, layout customization, publishing.</p>
+      </div>
+      <div class="capability__card" data-tilt>
+        <span class="capability__index">DEV</span>
+        <h3>Tooling</h3>
+        <p>Git, GitHub, GitLab, Sourcetree, VS Code, Android Studio, XAMPP.</p>
+      </div>
+      <div class="capability__card" data-tilt>
+        <span class="capability__index">OPS</span>
+        <h3>Field support</h3>
+        <p>Event technical support, streaming, video display, coordination.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="about__grid">
+      <div class="about__portrait">
+        <img src="assets/images/profile.png" alt="Portrait of Muhamad Nabil Fannani" loading="lazy"
+             onerror="this.closest('.about__portrait').classList.add('about__portrait--empty')">
+        <span class="about__portrait-label">profile.jpg</span>
+      </div>
+      <div class="about__content">
+        <span class="eyebrow">About</span>
+        <p class="about__lede">
+          I believe a good digital product is not just code that runs. It needs to make sense to the user, be easy to maintain, and reflect the reality of how people actually work.
+        </p>
+        <p>
+          My experience has mostly been in practical building work: institutional systems, content websites, student projects, and small apps that need to be useful right away. I learn from the way a system is used, not just from how it is designed on paper.
+        </p>
+        <div class="about__facts">
+          <div class="fact">
+            <span class="fact__label">Education</span>
+            <span class="fact__value">Informatics, UNS, GPA 3.8/4.00</span>
+          </div>
+          <div class="fact">
+            <span class="fact__label">Faculty</span>
+            <span class="fact__value">Information Technology and Data Science</span>
+          </div>
+          <div class="fact">
+            <span class="fact__label">Based in</span>
+            <span class="fact__value">Surakarta, Central Java, Indonesia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <span class="sparkle" aria-hidden="true">✦</span>
+    <h2 class="contact__headline">Have a project in mind?</h2>
+    <p class="contact__sub">Open to web, full stack, and mobile work.</p>
+    <a href="mailto:nabilfannani7@gmail.com" class="btn btn--outline btn--lg">nabilfannani7@gmail.com</a>
+
+    <div class="contact__links">
+      <a href="https://github.com/Nabil-Fan" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/muhamad-nabil-fannani-b41a3431a/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <a href="#top">back to top ↑</a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
 
 </body>
 </html>
