@@ -90,30 +90,71 @@
 (function nav() {
   const burger = document.querySelector('[data-burger]');
   const links = document.querySelector('.navLink');
-  if (!burger) return;
+  if (!burger || !links) return;
+
+  const syncMenuState = () => {
+    const isMobile = window.innerWidth <= 900;
+    const expanded = burger.getAttribute('aria-expanded') === 'true';
+
+    if (!isMobile) {
+      links.style.display = '';
+      links.style.position = '';
+      links.style.top = '';
+      links.style.right = '';
+      links.style.left = '';
+      links.style.flexDirection = '';
+      links.style.gap = '';
+      links.style.background = '';
+      links.style.border = '';
+      links.style.borderRadius = '';
+      links.style.padding = '';
+      return;
+    }
+
+    links.style.display = expanded ? 'flex' : 'none';
+
+    if (expanded) {
+      links.style.position = 'fixed';
+      links.style.top = '72px';
+      links.style.right = '20px';
+      links.style.left = '20px';
+      links.style.flexDirection = 'column';
+      links.style.gap = '20px';
+      links.style.background = '#0d0d0f';
+      links.style.border = '1px solid rgba(216,234,255,0.14)';
+      links.style.borderRadius = '16px';
+      links.style.padding = '24px';
+    } else {
+      links.style.position = '';
+      links.style.top = '';
+      links.style.right = '';
+      links.style.left = '';
+      links.style.flexDirection = '';
+      links.style.gap = '';
+      links.style.background = '';
+      links.style.border = '';
+      links.style.borderRadius = '';
+      links.style.padding = '';
+    }
+  };
 
   burger.addEventListener('click', () => {
     const expanded = burger.getAttribute('aria-expanded') === 'true';
     burger.setAttribute('aria-expanded', String(!expanded));
-    links.style.display = expanded ? 'none' : 'flex';
-    links.style.position = 'fixed';
-    links.style.top = '72px';
-    links.style.right = '20px';
-    links.style.left = '20px';
-    links.style.flexDirection = 'column';
-    links.style.gap = '20px';
-    links.style.background = '#0d0d0f';
-    links.style.border = '1px solid rgba(216,234,255,0.14)';
-    links.style.borderRadius = '16px';
-    links.style.padding = '24px';
+    syncMenuState();
   });
 
   links.querySelectorAll('a').forEach((a) => {
     a.addEventListener('click', () => {
-      burger.setAttribute('aria-expanded', 'false');
-      links.style.display = 'none';
+      if (window.innerWidth <= 900) {
+        burger.setAttribute('aria-expanded', 'false');
+      }
+      syncMenuState();
     });
   });
+
+  window.addEventListener('resize', syncMenuState);
+  syncMenuState();
 })();
 
 /* ==========================================================================
