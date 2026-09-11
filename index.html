@@ -1,84 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhamad Nabil Fannani</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhamad Nabil Fannani</title>
+<meta name="description" content="Portfolio of Muhamad Nabil Fannani, an Informatics student at UNS who builds web systems, institutional platforms, and practical digital products.">
 
-    <meta name="description" content="Portfolio of Muhamad Nabil Fannani, an Informatics student at UNS who builds web systems, institutional platforms, and practical digital products.">
-    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500&display=swap">
-    <link rel="preconnect" href="https://api.fontshare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://api.fontshare.com/css?f[]=satoshi@400
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <link rel="stylesheet" href="styles.css">
-    
-
-    
-
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- buat nanti partikel -->
-    <canvas id="field"></canvas> 
+<!-- Buat parikel -->
+<canvas id="field"></canvas>
 
-    <div class="grain"></div>
+<div class="grain"></div>
 
-    <header class="nav" data-nav>
-        <a href="#top" class="nav__mark">
-            <span class="nav__mark-dim">Muhamad </span>
-            <span class="nav__glyph" aria-hidden="true"></span>
-        Nabil <span class="nav__mark-dim">Fannani</span>
-        </a>
+<header class="nav" data-nav>
+  <a href="#top" class="nav__mark">
+    
+    <span class="nav__glyph" aria-hidden="true"></span>
+    <span class="nav__mark-dim">Muhamad</span>Nabil<span class="nav__mark-dim">Fannani</span>
+  </a>
+  <nav class="navLink">
+    <a href="#work">work</a>
+    <a href="#timeline">timeline</a>
+    <a href="#capability">capability</a>
+    <a href="#about">about</a>
+  </nav>
+  <a href="#contact" class="nav__cta">Get in touch</a>
+  <button class="nav__burger" data-burger aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
 
-        <nav class="navLink">   
-            <a href="#work">Work</a>
-            <a href="#about">timeline</a>
-            <a href="#contact">Capability</a>
-        </nav>
+<main id="top">
 
-        <a href="#contact" class="nav__cta">Get in touch</a>
-        <button class="nav__burger" data-burger aria-label="Toggle menu" aria-expanded="false">
-            <span></span><span></span>
-        </button>
-    </header>
+  <section class="hero">
+    <p class="eyebrow" data-reveal>Informatics student at Universitas Sebelas Maret</p>
+    <h1 class="hero__headline" data-reveal>
+      I build systems that <span class="accent">people can actually use</span>.
+    </h1>
+    <p class="hero__sub" data-reveal>
+      I am Muhamad Nabil Fannani, a web developer and Informatics student at
+      Universitas Sebelas Maret. I work on institutional platforms, Laravel
+      applications, and practical digital products that need to be useful in the real world.
+    </p>
+    <div class="hero__actions" data-reveal>
+      <a href="#work" class="btn btn--outline">see the work</a>
+      <a href="https://github.com/Nabil-Fan" target="_blank" rel="noopener" class="btn btn--ghost">github ↗</a>
+    </div>
 
-    <main id="top">
+    <div class="hero__frame" aria-hidden="true">
+      <span class="corner corner--tl"></span>
+      <span class="corner corner--tr"></span>
+      <span class="corner corner--bl"></span>
+      <span class="corner corner--br"></span>
+    </div>
 
-    <section class="hero">
-        <p class="eyebrow" data-reveal>Informatics student at Universitas Sebelas Maret</p>
-        
-        <h1 class="hero__headline" data-reveal>
-        I build systems that <span class="accent">people can actually use</span>.
-        </h1>
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-indicator__box"><span></span></div>
+    </div>
+  </section>
 
-        <p class="hero__sub" data-reveal>
-        I am Muhamad Nabil Fannani, a web developer and Informatics student at
-        Universitas Sebelas Maret. I work on institutional platforms, Laravel
-        applications, and practical digital products that need to be useful in the real world.
-        </p>
-
-        <div class="hero__actions" data-reveal>
-            <a href="#work" class="btn btn--outline">see the work</a>
-            <a href="https://github.com/Nabil-Fan" target="_blank" rel="noopener" class="btn btn--ghost">github ↗</a>
-        </div>
-
-        <div class="hero__frame" aria-hidden="true">
-            <span class="corner corner--tl"></span>
-            <span class="corner corner--tr"></span>
-            <span class="corner corner--bl"></span>
-            <span class="corner corner--br"></span>
-        </div>
-
-        <div class="scroll-indicator" aria-hidden="true">
-            <div class="scroll-indicator__box"><span></span></div>
-        </div>
-    </section>
-
-    <section class="statement">
+  <!-- ============ STATEMENT ============ -->
+  <section class="statement">
     <p>
       A lot of my work happens where real institutions meet real deadlines.
       I care more about whether a system works well for the people using it than whether it looks impressive in a pitch deck.
@@ -282,7 +273,6 @@
     </div>
   </section>
 
-  <!-- ============ ABOUT ============ -->
   <section class="about" id="about">
     <div class="about__grid">
       <div class="about__portrait">
@@ -338,8 +328,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
-</body>
-</html>
-
 </body>
 </html>
