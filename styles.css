@@ -1,0 +1,28 @@
+:root {
+  --ice: #d8eaff;
+  --void: #000000;
+  --carbon: #0d0d0f;
+  --graphite: #1a1c1f;
+  --slate: #2b2f33;
+  --iron: #41464c;
+  --steel: #565e66;
+  --fog: #6c757f;
+
+  --cobalt: #1f58f2;
+  --cobalt-dim: rgba(31, 88, 242, 0.14);
+  --signal: #ff4105;
+  --signal-dim: rgba(255, 65, 5, 0.12);
+
+  --font-display: 'General Sans', ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --max-w: 1280px;
+  --gap-section: clamp(72px, 10vw, 148px);
+  --gap-card: 32px;
+  --r-tag: 8px;
+  --r-card: 16px;
+  --r-large: 24px;
+  --r-pill: 40px;
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
