@@ -8,8 +8,8 @@
 
   let w, h, dpr;
   let particles = [];
-  const COUNT_DESKTOP = 140;
-  const COUNT_MOBILE = 60;
+  const COUNT_DESKTOP = 90;
+  const COUNT_MOBILE = 32;
 
   function resize() {
     dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -67,13 +67,21 @@
     }
   }
 
+  const scheduleInit = () => {
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(init, { timeout: 500 });
+    } else {
+      setTimeout(init, 120);
+    }
+  };
+
   let resizeTimer;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => { resize(); seed(); }, 200);
   });
 
-  init();
+  scheduleInit();
 })();
 
 /* ==========================================================================
